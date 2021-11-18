@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="MenuInputView">
+        <!-- 左侧标题文本 -->
+        <attr name="leftText" format="string" />
+        <!-- 左侧icon -->
+        <attr name="leftIcon" format="reference" />
+        <!-- 右侧文本 -->
+        <attr name="rightText" format="string" />
+        <!-- 右侧hint -->
+        <attr name="rightHint" format="string" />
+        <!-- 输入框类型 -->
+        <attr name="inputType" format="enum" >
+            <!-- 默认 -->
+            <enum name="text" value="0x00000001"/>
+            <!-- 密码 -->
+            <enum name="passWord" value="0x00000080"/>
+        </attr>
+        <!-- 右侧图标显示/隐藏 -->
+        <attr name="rightIconVisibility" format="enum" >
+            <!-- 显示 -->
+            <enum name="VISIBLE" value="0x00000000"/>
+            <!-- 隐藏 -->
+            <enum name="GONE" value="0x00000008"/>
+        </attr>
+        <!-- 底线显示/隐藏 -->
+        <attr name="bottomLineVisibility" format="enum" >
+            <!-- 显示 -->
+            <enum name="VISIBLE" value="0x00000000"/>
+            <!-- 隐藏 -->
+            <enum name="GONE" value="0x00000008"/>
+        </attr>
+        <!-- 底线显示/隐藏 -->
+        <attr name="rightTextGravity" format="enum" >
+            <!-- 显示 -->
+            <enum name="left" value="0"/>
+            <!-- 隐藏 -->
+            <enum name="right" value="1"/>
+        </attr>
+        <!-- 是否为必填项 -->
+        <attr name="isRequired" format="enum" >
+            <!-- 显示 -->
+            <enum name="VISIBLE" value="0x00000000"/>
+            <!-- 隐藏 -->
+            <enum name="GONE" value="0x00000008"/>
+        </attr>
+    </declare-styleable>
+
+    <!--指定某一个角为圆角-->
+    <declare-styleable name="CustomRoundImageView">
+        <attr name="type" format="enum">
+            <enum name="circle" value="0" />
+            <enum name="round" value="1" />
+        </attr>
+        <attr name="scale" format="enum">
+            <enum name="crop" value="0" />
+            <enum name="fit" value="1" />
+        </attr>
+        <attr name="borderRadius" format="dimension"/>
+        <attr name="top_left" format="boolean" />
+        <attr name="top_right" format="boolean" />
+        <attr name="bottom_left" format="boolean" />
+        <attr name="bottom_right" format="boolean" />
+    </declare-styleable>
+
+</resources>
