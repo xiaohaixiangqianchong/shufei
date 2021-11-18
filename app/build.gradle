@@ -1,5 +1,6 @@
 plugins {
     id 'com.android.library'
+    id 'maven-publish'
 }
 
 configurations {
@@ -67,4 +68,18 @@ dependencies {
     implementation 'com.cloud.hisavana.sdk.mediation:admob-lib:1.0.0.11'
 // facebook 建议添加
     implementation 'com.cloud.hisavana.sdk.mediation:fan-lib:1.0.0.11'
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            // Creates a Maven publication called "release".
+            release(MavenPublication) {
+                from components.release
+                groupId = 'com.github.xiaohaixiangqianchong'
+                artifactId = 'shufei'
+                version = '0.0.1'
+            }
+        }
+    }
 }
